@@ -47,9 +47,12 @@ Your task is to return the table with a column id and a column checks, where for
 Order the records in the answer table by id.
 
 CREATE PROCEDURE solution()
-/* Write your SQL here. Terminate each statement with a semicolon. */
-    SELECT id, IF (given_answer IS NULL , 'no answer',
-            IF(given_answer = correct_answer, 'correct', 'incorrect')) AS checks
-    FROM answers
-    ORDER BY id;
+	/* Write your SQL here. Terminate each statement with a semicolon. */
+
+
+ 
+	SELECT id, IF (given_answer IS NULL , 'no answer',
+	        IF(given_answer = correct_answer, 'correct', 'incorrect')) AS checks
+	FROM answers
+	ORDER BY id;
     End;
